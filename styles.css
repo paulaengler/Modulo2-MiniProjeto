@@ -56,7 +56,7 @@ header h1 {
 }
 
 .form button {
-    background: red;
+    background: green;
     color: #fff;
     padding: 16px 32px;
     border-radius: 5px; 
@@ -67,6 +67,7 @@ header h1 {
 .form button:hover {
     filter: brightness(0.8);
 }
+
 .list {
     width: 100%;
     max-width: 720px;
@@ -81,10 +82,12 @@ header h1 {
 }
 
 .list div button {
-    color: #F40273;
+    color: white;
     border: 0;
-    background: transparent;
+    background: red;
+    border-radius: 5px;
     cursor: pointer;
+    padding: 10px 32px;
 }
 .list div button:hover {
     filter: brightness(0.8);
@@ -96,9 +99,10 @@ header h1 {
 
 .list ul li {
     padding: 16px;
-    background: #fff;
+    background: lightpink;
     border-radius: 5px;
-    color: #44546A;
+    color: darkblue;
+    margin-bottom: 10px;
 }
 
 .news {
@@ -116,7 +120,7 @@ header h1 {
     align-items: center;
     padding: 8px;
     font-size: 12px;
-    background: #F5F5F5;
+    background: lightcyan;
     color: #112BDA;
     font-weight: bold;
 }
@@ -125,6 +129,6 @@ header h1 {
     padding: 16px;
     width: 100%;
     text-overflow: ellipsis;
-    font-size: 14px;
-    color: #44546A;
+    font-size: 17px;
+    color: black;
 }
