@@ -44,14 +44,12 @@ function limpar() {
   console.log("funcionou o limpar");
   localStorage.removeItem('meusInteresses');
   const lista = document.getElementById('resultado');
-  while (lista.firstChild) {
-      lista.removeChild(lista.firstChild);
-  }
+  lista.innerHTML = "";
 }
 
 async function buscarNoticiaIBGE() {
     try {
-        const response = await fetch('http://servicodados.ibge.gov.br/api/v3/noticias');
+        const response = await fetch('https://servicodados.ibge.gov.br/api/v3/noticias/?destaque=0');
         const dados = await response.json();
         if (dados.items && dados.items.length > 0) {
             const noticia = dados.items[0];
