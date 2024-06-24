@@ -1,5 +1,6 @@
+// Função para adicionar os interesses a lista
 function adicionar() {
-  console.log("funcionou o adicionar");
+  console.log ("funcionou o adicionar");
   const input = document.getElementById("inputInteresse");
   const novaTarefa = input.value.trim();
 
@@ -22,6 +23,7 @@ function adicionar() {
   }
 }
 
+
 // Função para carregar tarefas do localStorage
 function carregarTarefas() {
     const atualizado = document.getElementById("resultado");
@@ -35,11 +37,16 @@ function carregarTarefas() {
   });
 }
 
+
 // Carregar as tarefas quando a página for carregada
 window.onload = carregarTarefas;
 
+
+//Intervalo de atualização
 setInterval(carregarTarefas, 1000);
 
+
+//Função para limpar a lista e do local Storage
 function limpar() {
   console.log("funcionou o limpar");
   localStorage.removeItem('meusInteresses');
@@ -47,6 +54,8 @@ function limpar() {
   lista.innerHTML = "";
 }
 
+
+//Função para buscar o título das notícias na API no IBGE
 async function buscarNoticiaIBGE() {
     try {
         const response = await fetch('https://servicodados.ibge.gov.br/api/v3/noticias/?destaque=0');
@@ -62,6 +71,8 @@ async function buscarNoticiaIBGE() {
         document.getElementById('noticia').innerText = 'Erro ao buscar notícia.';
     }
 }
+
+
 
 // Buscar notícia ao carregar a página
 buscarNoticiaIBGE()
