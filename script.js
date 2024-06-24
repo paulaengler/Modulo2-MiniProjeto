@@ -23,6 +23,21 @@ function adicionar() {
   }
 }
 
+//Evento para adicionar o interesse a lista, através do enter do teclado
+document.addEventListener('DOMContentLoaded', function () {
+  const input = document.getElementById('inputInteresse');
+  const button = document.getElementById('adicionarTarefa');
+
+  input.addEventListener('keypress', function (event) {
+      if (event.key === 'Enter') {
+          event.preventDefault();  // Impede o comportamento padrão do Enter
+          button.click();          // Aciona a função adicionar
+      }
+  });
+});
+
+
+
 
 // Função para carregar tarefas do localStorage
 function carregarTarefas() {
